@@ -16,4 +16,12 @@ describe('Pruebas de strings', () => {
 
   });
 
+  it('Debe de regresar un string con el nombre enviado', () => {
+    const nombre = 'Elias';
+
+    const resp = mensaje(nombre);
+
+    expect( resp ).toContain(nombre);
+  });
+
 });
