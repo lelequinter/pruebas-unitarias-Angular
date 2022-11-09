@@ -42,7 +42,20 @@ describe('MedicosComponent', () => {
 
     componente.agregarMedico();
 
-    expect( espia ).toHaveBeenCalled();
+    expect(espia).toHaveBeenCalled();
+
+  });
+
+  it('Debe de agregar un nuevo medico al arreglo de medicos', () => {
+
+    const medico = { id: 1, nombre: 'Juan' };
+
+    spyOn(servicio, 'agregarMedico')
+      .and.returnValue(from([medico]));
+
+    componente.agregarMedico();
+
+    expect(componente.medicos.indexOf(medico)).toBeGreaterThanOrEqual(0);
 
   });
 
