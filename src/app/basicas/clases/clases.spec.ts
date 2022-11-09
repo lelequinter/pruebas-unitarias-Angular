@@ -1,6 +1,6 @@
 import { Jugador } from "./clases";
 
-describe('Pruebas en clases', () => {
+xdescribe('Pruebas en clases', () => {
 
   let jugador = new Jugador();
   // reset de la propiedad para cada prueba
